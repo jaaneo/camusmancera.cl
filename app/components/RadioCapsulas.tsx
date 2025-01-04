@@ -39,7 +39,6 @@ export default function AudioPlayer() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
-  const [volume, setVolume] = useState(1);
   const [shuffle, setShuffle] = useState(false);
   const [showPlaylist, setShowPlaylist] = useState(false);
 
@@ -48,18 +47,11 @@ export default function AudioPlayer() {
 
   useEffect(() => {
     if (audioRef.current) {
-      audioRef.current.volume = volume;
       const handleLoadedMetadata = () => setDuration(audioRef.current?.duration || 0);
       audioRef.current.addEventListener("loadedmetadata", handleLoadedMetadata);
       return () => audioRef.current?.removeEventListener("loadedmetadata", handleLoadedMetadata);
     }
   }, [currentTrackIndex]);
-
-  useEffect(() => {
-    if (audioRef.current) {
-      audioRef.current.volume = volume;
-    }
-  }, [volume]);
 
   const togglePlay = () => {
     if (isPlaying) {
