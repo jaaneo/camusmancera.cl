@@ -1,25 +1,37 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 
-const programaData = [
+type Programa = {
+  dia: string;
+  hora: string;
+  lugar: string;
+  ubicacion: string;
+  eventos: string[];
+  imagen: string;
+};
+
+const programaData: Programa[] = [
   {
-    dia: "Lunes 13",
+    dia: "Lunes 13 de enero",
     hora: "19:30 hrs",
     lugar: "Teatro Cervantes, Valdivia",
-    ubicacion: "https://goo.gl/maps/TeatroCervantesValdivia", // Enlace de Google Maps
+    ubicacion:
+      "https://google.com/maps/dir/-39.8399439,-73.2240565/Teatro+Cervantes+Valdivia/@-39.8260035,-73.2530655,6919m/data=!3m2!1e3!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x9615ee761f544113:0xc0f7a3491355fa2b!2m2!1d-73.2456142!2d-39.8127818?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoJLDEwMjExMjMzSAFQAw%3D%3D",
     eventos: [
       "Orquesta Juvenil e Infantil de Valdivia. Director Pablo Matamala Lopetegui.",
       "Orquesta Ernesto Guarda Carrasco. Director Alejandro Torres.",
       "Orquesta Sinfónica Infantil de la Corporación Cultural Municipal de Puerto Montt. Director Arturo Ojeda.",
     ],
-    imagen: "/lunes.jpg", // Imagen correspondiente
+    imagen: "/lunes.jpg",
   },
   {
-    dia: "Martes 14",
+    dia: "Martes 14 de enero",
     hora: "19:30 hrs",
     lugar: "Teatro Cervantes, Valdivia",
-    ubicacion: "https://goo.gl/maps/TeatroCervantesValdivia",
+    ubicacion:
+      "https://google.com/maps/dir/-39.8399439,-73.2240565/Teatro+Cervantes+Valdivia/@-39.8260035,-73.2530655,6919m/data=!3m2!1e3!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x9615ee761f544113:0xc0f7a3491355fa2b!2m2!1d-73.2456142!2d-39.8127818?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoJLDEwMjExMjMzSAFQAw%3D%3D",
     eventos: [
       "Armonía Fluvial Cuarteto de Flautas Traversa.",
       "Kuatriada. Música Latinoamericana.",
@@ -27,43 +39,72 @@ const programaData = [
     imagen: "/martes.jpg",
   },
   {
-    dia: "Miércoles 15",
+    dia: "Miércoles 15 de enero",
     hora: "19:30 hrs",
     lugar: "Plaza de Paillaco",
-    ubicacion: "https://goo.gl/maps/PlazaDePaillaco",
+    ubicacion:
+      "https://www.google.com/maps/dir//Av.+Bernardo+O'Higgins+345,+Paillaco,+Los+R%C3%ADos/@-40.0706411,-72.9551351,27578m/data=!3m1!1e3!4m8!4m7!1m0!1m5!1m1!1s0x9616798c859aa3f7:0x24f6345739e662d0!2m2!1d-72.8727342!2d-40.0706703?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoJLDEwMjExMjMzSAFQAw%3D%3D",
     eventos: ["Concierto en Paillaco. Música para todos."],
     imagen: "/paillaco.jpg",
+  },
+  {
+    dia: "Jueves 16 de enero",
+    hora: "19:30 hrs",
+    lugar: "Teatro Cervantes, Valdivia",
+    ubicacion:
+      "https://google.com/maps/dir/-39.8399439,-73.2240565/Teatro+Cervantes+Valdivia/@-39.8260035,-73.2530655,6919m/data=!3m2!1e3!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x9615ee761f544113:0xc0f7a3491355fa2b!2m2!1d-73.2456142!2d-39.8127818?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoJLDEwMjExMjMzSAFQAw%3D%3D",
+    eventos: [
+      "Concierto de Música Barroca: Ensamble del Sur.",
+      "Orquesta de Cámara de la Universidad Austral de Chile.",
+    ],
+    imagen: "/jueves.jpg",
+  },
+  {
+    dia: "Viernes 17 de enero",
+    hora: "19:30 hrs",
+    lugar: "Teatro Cervantes, Valdivia",
+    ubicacion:
+      "https://google.com/maps/dir/-39.8399439,-73.2240565/Teatro+Cervantes+Valdivia/@-39.8260035,-73.2530655,6919m/data=!3m2!1e3!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x9615ee761f544113:0xc0f7a3491355fa2b!2m2!1d-73.2456142!2d-39.8127818?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoJLDEwMjExMjMzSAFQAw%3D%3D",
+    eventos: [
+      "Orquesta Sinfónica Juvenil Nacional de Chile.",
+      "Coro de la Universidad Austral de Chile.",
+    ],
+    imagen: "/viernes.jpg",
+  },
+  {
+    dia: "Sábado 18 de enero",
+    hora: "19:30 hrs",
+    lugar: "Teatro Cervantes, Valdivia",
+    ubicacion:
+      "https://google.com/maps/dir/-39.8399439,-73.2240565/Teatro+Cervantes+Valdivia/@-39.8260035,-73.2530655,6919m/data=!3m2!1e3!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x9615ee761f544113:0xc0f7a3491355fa2b!2m2!1d-73.2456142!2d-39.8127818?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoJLDEwMjExMjMzSAFQAw%3D%3D",
+    eventos: [
+      "Gran Concierto de Clausura.",
+      "Participación de todas las orquestas del Campamento Musical.",
+    ],
+    imagen: "/sabado.jpg",
   },
 ];
 
 export default function Programa() {
-  const handleAddToCalendar = (programa: any) => {
-    const event = `
-BEGIN:VCALENDAR
+  const handleAddToCalendar = (programa: Programa) => {
+    const [dia, mes] = programa.dia.split(" de ");
+    const fecha = `2025-${mes === "enero" ? "01" : ""}-${dia.padStart(2, "0")}`;
+    const icsContent = `BEGIN:VCALENDAR
 VERSION:2.0
 BEGIN:VEVENT
-SUMMARY:${programa.dia} - ${programa.eventos[0]}
+SUMMARY:Evento: ${programa.lugar}
+DTSTART:${fecha}T193000Z
+DTEND:${fecha}T213000Z
 LOCATION:${programa.lugar}
-DTSTART:${formatToICalDate(new Date(`2025-01-${programa.dia.split(" ")[1]}`))}T193000Z
-DTEND:${formatToICalDate(new Date(`2025-01-${programa.dia.split(" ")[1]}`))}T213000Z
-DESCRIPTION:${programa.eventos.join(", ")}
+DESCRIPTION:Evento del Campamento Musical 2025
 END:VEVENT
-END:VCALENDAR
-    `.trim();
+END:VCALENDAR`;
 
-    const blob = new Blob([event], { type: "text/calendar;charset=utf-8" });
-    const url = URL.createObjectURL(blob);
-
+    const blob = new Blob([icsContent], { type: "text/calendar;charset=utf-8;" });
     const link = document.createElement("a");
-    link.href = url;
-    link.download = `${programa.dia.replace(/\s/g, "_")}_evento.ics`;
+    link.href = URL.createObjectURL(blob);
+    link.download = `evento-${programa.dia.replace(/\s/g, "-")}.ics`;
     link.click();
-
-    URL.revokeObjectURL(url);
-  };
-
-  const formatToICalDate = (date: Date) => {
-    return date.toISOString().replace(/[-:]/g, "").split(".")[0];
   };
 
   return (
@@ -79,9 +120,11 @@ END:VCALENDAR
               className="relative bg-gray-800 rounded-xl shadow-xl overflow-hidden transform transition-transform duration-300 hover:scale-105"
             >
               {/* Imagen */}
-              <img
+              <Image
                 src={programa.imagen}
                 alt={`Imagen del ${programa.dia}`}
+                width={500}
+                height={192}
                 className="w-full h-48 object-cover"
               />
               {/* Contenido */}
@@ -114,8 +157,6 @@ END:VCALENDAR
                   </button>
                 </div>
               </div>
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 hover:opacity-40 transition-opacity duration-300"></div>
             </div>
           ))}
         </div>
