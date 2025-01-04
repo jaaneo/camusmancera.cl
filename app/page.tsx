@@ -1,10 +1,27 @@
 import React from "react";
 
 export default function Home() {
+  const emojis = ["🎻", "🎺", "🎹", "🎷", "🥁", "🎸", "🪗"];
+
   return (
-    <main className="relative flex min-h-screen items-center justify-center bg-gradient-to-tr from-orange-400 via-green-400 to-yellow-300">
+    <main className="relative flex min-h-screen items-center justify-center bg-gradient-to-tr from-orange-400 via-green-400 to-yellow-300 overflow-hidden">
       {/* Capa oscura */}
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+
+      {/* Emojis flotantes */}
+      {emojis.map((emoji, index) => (
+        <span
+          key={index}
+          className="absolute text-4xl animate-float"
+          style={{
+            top: `${Math.random() * 100}%`,
+            left: `${Math.random() * 100}%`,
+            animationDelay: `${Math.random() * 5}s`,
+          }}
+        >
+          {emoji}
+        </span>
+      ))}
 
       {/* Contenido */}
       <div className="relative text-center text-white p-6">
