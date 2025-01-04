@@ -5,14 +5,11 @@ export default function Home() {
 
   return (
     <main className="relative flex min-h-screen items-center justify-center bg-gradient-to-tr from-orange-400 via-green-400 to-yellow-300 overflow-hidden">
-      {/* Capa oscura */}
-      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-
       {/* Emojis flotantes */}
       {emojis.map((emoji, index) => (
         <span
           key={index}
-          className="absolute text-4xl animate-float"
+          className="absolute text-4xl animate-float opacity-50"
           style={{
             top: `${Math.random() * 100}%`,
             left: `${Math.random() * 100}%`,
@@ -23,14 +20,17 @@ export default function Home() {
         </span>
       ))}
 
+      {/* Capa oscura */}
+      <div className="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
+
       {/* Contenido */}
-      <div className="relative text-center text-white p-6">
+      <div className="relative z-20 text-center text-white p-6">
         <img
           src="/logo_camusmancera.png"
           alt="Logo Campamento Musical Marqués de Mancera"
           className="w-32 h-32 mx-auto mb-6"
         />
-        <h1 className="text-5xl font-bold mb-4">
+        <h1 className="text-4xl sm:text-5xl font-bold mb-4">
           XXX Campamento <br />
           Musical <br />
           Marqués De Mancera
@@ -48,6 +48,13 @@ export default function Home() {
         <p className="mt-2 text-lg font-light">
           ¡Muy pronto disponible!
         </p>
+        <a
+          href="/Reglamento_Campamento_version_xxx.pdf"
+          download
+          className="mt-6 inline-block text-lg font-bold text-orange-400 underline hover:text-orange-300"
+        >
+          Descargar Reglamento del Campamento
+        </a>
       </div>
     </main>
   );

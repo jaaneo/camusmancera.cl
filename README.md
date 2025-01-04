@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎵 Campamento Musical Marqués de Mancera
 
-## Getting Started
+Bienvenido al repositorio del **Campamento Musical Marqués de Mancera**, un evento anual que celebra su **XXX edición** del **13 al 18 de enero de 2025** en **Valdivia, Chile**. Este proyecto contiene el sitio web oficial del campamento.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🌟 Descripción del Proyecto
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+El sitio web del campamento está diseñado para ofrecer toda la información necesaria, como detalles del evento, reglamento, horarios, actividades, y más. ¡Estamos trabajando para brindar la mejor experiencia digital a nuestros participantes! 🚀
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📅 Detalles del Evento
 
-## Learn More
+- **Fechas**: 13 – 18 de enero de 2025 🗓️  
+- **Lugar**: Valdivia, Chile 🇨🇱  
+- **Edición**: Presencial 🙌  
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠 Características del Campamento
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Sin costo de inscripción** 💸  
+- **Actividades diarias**:
+  - **Mañana**: 9:00 – 13:00 hrs  
+  - **Tarde**: 15:00 – 18:00 hrs  
+  - **Noche**: 19:00 Conciertos diarios 🎶  
 
-## Deploy on Vercel
+- **Actividades principales**:
+  - Ensayos de orquesta: parciales, seccionales y tutti. 🎻  
+  - Clases de instrumentos y talleres. 🥁  
+  - Conciertos abiertos al público. 🎤  
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📍 Ubicación y Transporte
+
+- **Lugar principal**:  
+  Escuela El Bosque, **Av. Circunvalación Sur 2365, Valdivia**. 🏫  
+
+- **Transporte cercano**:
+  - **Colectivos de color verde** 🚖  
+  - **Micros**: Líneas **20**, **04**, y **05** 🚍  
+
+---
+
+## 📂 Reglamento del Campamento
+
+📥 [Descargar Reglamento del Campamento](./public/Reglamento_Campamento_version_xxx.pdf)
+
+---
+
+## 🚀 Tecnologías Utilizadas
+
+Este proyecto está desarrollado con las siguientes tecnologías:
+
+- **[Next.js](https://nextjs.org/)**: Framework de React para la creación de aplicaciones web modernas. ⚛️  
+- **[React](https://reactjs.org/)**: Biblioteca de JavaScript para construir interfaces de usuario.  
+- **[TypeScript](https://www.typescriptlang.org/)**: Superconjunto de JavaScript que añade tipado estático. 📝  
+- **[Tailwind CSS](https://tailwindcss.com/)**: Framework de CSS para un diseño limpio y eficiente. 🎨  
+- **[Vercel](https://vercel.com/)**: Plataforma de despliegue para aplicaciones web rápidas y seguras. 🌐  
+- **[ESLint](https://eslint.org/)**: Herramienta para mantener un código limpio y libre de errores.  
+- **[Prettier](https://prettier.io/)**: Formateador de código para mantener la consistencia en el estilo.  
+
+---
+
+## 👨‍💻 Cómo Contribuir
+
+¡Contribuir al desarrollo del sitio es bienvenido! Sigue estos pasos para comenzar:
+
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/tu-usuario/camusmancera.git
