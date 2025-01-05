@@ -25,7 +25,7 @@ export default function Hero() {
 
         {/* Título principal */}
         <h1
-          className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-800 leading-tight mb-6 py-8"
+          className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-800 leading-tight mb-6 py-3"
           style={{ fontFamily: "Roboto, sans-serif" }}
         >
           XXX Campamento Musical Marqués de Mancera
