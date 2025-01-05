@@ -100,7 +100,17 @@ export default function AudioPlayer() {
   };
 
   return (
-    <section className="bg-gray-900 min-h-screen flex items-center justify-center">
+    <section className="bg-white min-h-screen flex flex-col items-center py-20">
+      {/* Subtítulo Superior */}
+      <h3 className="text-sm font-medium tracking-wide text-gray-500 uppercase mb-2">
+        XXX Campamento Musical Marqués de Mancera
+      </h3>
+
+      {/* Título Principal */}
+      <h1 className="text-4xl font-bold text-orange-500 mb-8">
+        Cápsulas Radiales
+      </h1>
+
       <div className="w-full max-w-lg bg-gray-800 rounded-xl shadow-lg p-6">
         {/* Track Info */}
         <div className="flex items-center space-x-4">
