@@ -13,8 +13,8 @@ export default {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        montserrat: ['Montserrat', 'sans-serif'],
-        merriweather: ['Merriweather', 'serif'],
+        raleway: ["Raleway", "sans-serif"],
+        caveat: ["Caveat", "cursive"],
       },
     },
   },

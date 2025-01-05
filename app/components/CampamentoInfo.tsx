@@ -1,11 +1,11 @@
 'use client';
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
 const images = [
-  { src: "/campamento1.png", alt: "Orquesta en campamento" },
-  { src: "/campamento2.png", alt: "Concierto en campamento" },
-  { src: "/campamento3.png", alt: "Ensayo grupal" },
-  { src: "/campamento4.png", alt: "Participación de orquestas" },
+  { src: '/campamento1.png', alt: 'Orquesta en campamento' },
+  { src: '/campamento2.png', alt: 'Concierto en campamento' },
+  { src: '/campamento3.png', alt: 'Ensayo grupal' },
+  { src: '/campamento4.png', alt: 'Participación de orquestas' },
 ];
 
 export default function CampamentoInfo() {
@@ -27,9 +27,7 @@ export default function CampamentoInfo() {
   };
 
   const showPreviousImage = () => {
-    setCurrentImageIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
-    );
+    setCurrentImageIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
   };
 
   useEffect(() => {
@@ -37,7 +35,7 @@ export default function CampamentoInfo() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const index = Number(entry.target.getAttribute("data-index"));
+            const index = Number(entry.target.getAttribute('data-index'));
             setLoadedImages((prev) => {
               const newLoaded = [...prev];
               newLoaded[index] = true;
@@ -49,18 +47,18 @@ export default function CampamentoInfo() {
       { threshold: 0.1 }
     );
 
-    const imageElements = document.querySelectorAll(".fade-in-image");
+    const imageElements = document.querySelectorAll('.fade-in-image');
     imageElements.forEach((img) => observer.observe(img));
 
     return () => observer.disconnect();
   }, []);
 
   return (
-    <section className="bg-white py-16">
+    <section id="campamento-info" className="bg-white py-16">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 lg:gap-12 items-start">
         {/* Texto */}
         <div className="mb-8 lg:mb-0">
-          <h3 className="text-sm font-medium tracking-wide text-gray-600 uppercase mb-4">
+          <h3 className="text-gray-500 font-caveat font-semibold mb-4" style={{ fontSize: '32px' }}>
             Campamento Musical
           </h3>
           <h2 className="text-4xl font-bold text-orange-500 mb-6">
@@ -85,15 +83,15 @@ export default function CampamentoInfo() {
         </div>
 
         {/* Galería de Imágenes */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 py-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8 py-8">
           {images.map((image, index) => (
             <img
               key={index}
               src={image.src}
               alt={image.alt}
               data-index={index}
-              className={`rounded-lg shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer fade-in-image ${
-                loadedImages[index] ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+              className={`rounded-lg shadow-md hover:scale-105 transition-transform duration-500 cursor-pointer fade-in-image ${
+                loadedImages[index] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
               }`}
               onClick={() => openModal(index)}
             />
