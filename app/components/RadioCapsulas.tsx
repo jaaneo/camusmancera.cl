@@ -102,7 +102,7 @@ export default function AudioPlayer() {
   return (
     <section className="bg-white min-h-screen flex flex-col items-center py-20">
       {/* Subtítulo Superior */}
-      <h3 className="text-sm font-medium tracking-wide text-gray-500 uppercase mb-2">
+      <h3 className="text-sm text-center font-medium tracking-wide text-gray-500 uppercase mb-2">
         XXX Campamento Musical Marqués de Mancera
       </h3>
 
