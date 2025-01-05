@@ -85,7 +85,7 @@ export default function CampamentoInfo() {
         </div>
 
         {/* Galería de Imágenes */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 py-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 py-10">
           {images.map((image, index) => (
             <img
               key={index}

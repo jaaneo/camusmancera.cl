@@ -1,7 +1,14 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
-import { FaPlay, FaPause, FaStepBackward, FaStepForward, FaRandom, FaList } from "react-icons/fa";
+import {
+  FaPlay,
+  FaPause,
+  FaStepBackward,
+  FaStepForward,
+  FaRandom,
+  FaList,
+} from "react-icons/fa";
 
 const tracks = [
   {
@@ -48,8 +55,17 @@ export default function AudioPlayer() {
   useEffect(() => {
     if (audioRef.current) {
       const handleLoadedMetadata = () => setDuration(audioRef.current?.duration || 0);
-      audioRef.current.addEventListener("loadedmetadata", handleLoadedMetadata);
-      return () => audioRef.current?.removeEventListener("loadedmetadata", handleLoadedMetadata);
+      const audioElement = audioRef.current;
+      audioElement.addEventListener("loadedmetadata", handleLoadedMetadata);
+
+      // Para asegurar que la duración se carga desde el primer render
+      if (audioElement.readyState >= 1) {
+        handleLoadedMetadata();
+      }
+
+      return () => {
+        audioElement.removeEventListener("loadedmetadata", handleLoadedMetadata);
+      };
     }
   }, [currentTrackIndex]);
 
@@ -100,21 +116,25 @@ export default function AudioPlayer() {
   };
 
   return (
-    <section className="bg-white min-h-screen flex flex-col items-center py-20">
+    <section className="bg-white min-h-screen flex flex-col items-center py-20 px-4 sm:px-6">
       {/* Subtítulo Superior */}
       <h3 className="text-sm text-center font-medium tracking-wide text-gray-500 uppercase mb-2">
         XXX Campamento Musical Marqués de Mancera
       </h3>
 
       {/* Título Principal */}
-      <h1 className="text-4xl font-bold text-orange-500 mb-8">
+      <h1 className="text-4xl font-bold text-orange-500 mb-8 text-center">
         Cápsulas Radiales
       </h1>
 
       <div className="w-full max-w-lg bg-gray-800 rounded-xl shadow-lg p-6">
         {/* Track Info */}
         <div className="flex items-center space-x-4">
-          <img src={currentTrack.cover} alt="Cover Art" className="w-24 h-24 rounded-lg" />
+          <img
+            src={currentTrack.cover}
+            alt="Cover Art"
+            className="w-24 h-24 rounded-lg"
+          />
           <div>
             <h2 className="text-white font-bold text-xl">{currentTrack.name}</h2>
             <p className="text-gray-400">{currentTrack.artist}</p>
@@ -142,7 +162,9 @@ export default function AudioPlayer() {
         <div className="flex items-center justify-between mt-6 space-x-4">
           <button
             onClick={() => setShuffle(!shuffle)}
-            className={`text-gray-400 hover:text-orange-500 ${shuffle ? "text-orange-500" : ""}`}
+            className={`text-gray-400 hover:text-orange-500 ${
+              shuffle ? "text-orange-500" : ""
+            }`}
           >
             <FaRandom size={24} />
           </button>
@@ -154,7 +176,7 @@ export default function AudioPlayer() {
           </button>
           <button
             onClick={togglePlay}
-            className="bg-white text-gray-800 w-14 h-14 rounded-full flex items-center justify-center shadow-md hover:shadow-lg"
+            className="bg-white text-orange-500 w-14 h-14 rounded-full flex items-center justify-center shadow-md hover:shadow-lg"
           >
             {isPlaying ? <FaPause size={28} /> : <FaPlay size={28} />}
           </button>
