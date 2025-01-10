@@ -6,6 +6,13 @@ import Image from "next/image";
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const handleScroll = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <nav className="bg-white shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -21,12 +28,36 @@ export default function Navbar() {
 
           {/* Desktop Menu */}
           <ul className="hidden md:flex space-x-6 font-medium text-gray-700">
-            <li><a href="#inicio" className="hover:text-orange-500">Inicio</a></li>
-            <li><a href="#exponentes" className="hover:text-orange-500">Exponentes</a></li>
-            <li><a href="#calendario" className="hover:text-orange-500">Calendario</a></li>
-            <li><a href="#noticias" className="hover:text-orange-500">Noticias</a></li>
-            <li><a href="https://inscripciones.camusmancera.cl" className="hover:text-orange-500">Inscripciones</a></li>
-            <li><a href="#contacto" className="hover:text-orange-500">Contacto</a></li>
+            <li>
+              <button onClick={() => handleScroll("inicio")} className="hover:text-orange-500">
+                Inicio
+              </button>
+            </li>
+            <li>
+              <button onClick={() => handleScroll("exponentes")} className="hover:text-orange-500">
+                Exponentes
+              </button>
+            </li>
+            <li>
+              <button onClick={() => handleScroll("programa")} className="hover:text-orange-500">
+                Calendario
+              </button>
+            </li>
+            <li>
+              <button onClick={() => handleScroll("noticias")} className="hover:text-orange-500">
+                Noticias
+              </button>
+            </li>
+            <li>
+              <a href="https://inscripciones.camusmancera.cl" className="hover:text-orange-500">
+                Inscripciones
+              </a>
+            </li>
+            <li>
+              <button onClick={() => handleScroll("contacto")} className="hover:text-orange-500">
+                Contacto
+              </button>
+            </li>
           </ul>
 
           {/* Hamburger Menu */}
@@ -67,12 +98,36 @@ export default function Navbar() {
           } md:hidden bg-white border-t border-gray-200`}
         >
           <ul className="flex flex-col space-y-4 py-4 px-4 font-medium text-gray-700">
-            <li><a href="#inicio" className="hover:text-orange-500">Inicio</a></li>
-            <li><a href="#exponentes" className="hover:text-orange-500">Exponentes</a></li>
-            <li><a href="#calendario" className="hover:text-orange-500">Calendario</a></li>
-            <li><a href="#noticias" className="hover:text-orange-500">Noticias</a></li>
-            <li><a href="https://inscripciones.camusmancera.cl" className="hover:text-orange-500">Inscripciones</a></li>
-            <li><a href="#contacto" className="hover:text-orange-500">Contacto</a></li>
+            <li>
+              <button onClick={() => handleScroll("inicio")} className="hover:text-orange-500">
+                Inicio
+              </button>
+            </li>
+            <li>
+              <button onClick={() => handleScroll("exponentes")} className="hover:text-orange-500">
+                Exponentes
+              </button>
+            </li>
+            <li>
+              <button onClick={() => handleScroll("programa")} className="hover:text-orange-500">
+                Calendario
+              </button>
+            </li>
+            <li>
+              <button onClick={() => handleScroll("noticias")} className="hover:text-orange-500">
+                Noticias
+              </button>
+            </li>
+            <li>
+              <a href="https://inscripciones.camusmancera.cl" className="hover:text-orange-500">
+                Inscripciones
+              </a>
+            </li>
+            <li>
+              <button onClick={() => handleScroll("contacto")} className="hover:text-orange-500">
+                Contacto
+              </button>
+            </li>
           </ul>
         </div>
       </div>

@@ -1,8 +1,9 @@
 import "./globals.css";
+import "./fontawesome"; // Importar configuración de FontAwesome
 
 export const metadata = {
   title: "Campamento Musical Marqués de Mancera",
-  description: "Sitio en construcción",
+  description: "Sitio oficial del XXX Campamento Musical Marqués de Mancera",
 };
 
 export default function RootLayout({

@@ -10,7 +10,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative bg-gradient-to-tr from-yellow-200 via-white to-green-200 py-20 sm:py-24 md:py-32">
+    <section id="inicio" className="relative bg-gradient-to-tr from-yellow-200 via-white to-green-200 py-20 sm:py-24 md:py-32">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Subtítulo superior */}
         <h3
