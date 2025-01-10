@@ -59,14 +59,14 @@ export default function CampamentoInfo() {
         {/* Texto */}
         <div className="mb-8 lg:mb-0">
           <h3 className="text-gray-500 font-caveat font-semibold mb-4" style={{ fontSize: '32px' }}>
-            Campamento Musical
+            Un poco de historia..
           </h3>
           <h2 className="text-4xl font-bold text-orange-500 mb-6">
-            XXX Campamento Musical Marqués de Mancera
+            Campamento Musical Marqués de Mancera
           </h2>
           <div className="w-16 h-1 bg-green-600 mb-6"></div>
           <p className="text-lg text-gray-700 leading-relaxed mb-4">
-            El Campamento Musical Marqués de Mancera es un espacio formativo
+            Es un espacio formativo
             para niños, niñas y adolescentes. Fue creado bajo la premisa de
             reunir en un mismo lugar a todos quienes buscan mejorar sus
             conocimientos y habilidades en la interpretación de diversos

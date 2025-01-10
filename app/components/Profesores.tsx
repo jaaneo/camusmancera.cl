@@ -105,7 +105,7 @@ export default function Profesores() {
         {/* Títulos */}
         <h3
           className="text-gray-500 font-caveat font-semibold mb-4 text-center"
-          style={{ fontSize: "32px" }}
+          style={{ fontSize: "25px" }}
         >
           XXX Campamento Musical Marqués de Mancera
         </h3>
