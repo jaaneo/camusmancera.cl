@@ -58,10 +58,10 @@ export default function CampamentoInfo() {
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 lg:gap-12 items-start">
         {/* Texto */}
         <div className="mb-8 lg:mb-0">
-          <h3 className="text-gray-500 font-caveat font-semibold mb-4" style={{ fontSize: '32px' }}>
+          <h3 className="text-orange-500 font-caveat font-semibold mb-4" style={{ fontSize: '32px' }}>
             Un poco de historia..
           </h3>
-          <h2 className="text-4xl font-bold text-orange-500 mb-6">
+          <h2 className="text-4xl font-bold text-gray-500 mb-6">
             Campamento Musical Marqués de Mancera
           </h2>
           <div className="w-16 h-1 bg-green-600 mb-6"></div>

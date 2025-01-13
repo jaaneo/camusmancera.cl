@@ -32,10 +32,10 @@ export default function Patrocinadores() {
     <section className="bg-gray-100 py-16" id="patrocinadores">
       <div className="max-w-7xl mx-auto px-6">
         {/* Título */}
-        <h2 className="text-gray-500 font-caveat font-semibold mb-4 text-center" style={{ fontSize: "32px" }}>
+        <h2 className="text-orange-500 font-caveat font-semibold mb-4 text-center" style={{ fontSize: "32px" }}>
           XXX Campamento Musical Marqués de Mancera
         </h2>
-        <h3 className="text-4xl font-bold text-orange-500 mb-6 text-center">
+        <h3 className="text-4xl font-bold text-gray-500 mb-6 text-center">
           Patrocinadores Oficiales
         </h3>
         <p className="text-center text-lg text-gray-600 mb-12">

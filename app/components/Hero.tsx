@@ -10,7 +10,10 @@ export default function Hero() {
   };
 
   return (
-    <section id="inicio" className="relative bg-gradient-to-tr from-yellow-200 via-white to-green-200 py-20 sm:py-24 md:py-32">
+    <section
+      id="inicio"
+      className="relative bg-gradient-to-tr from-yellow-200 via-white to-green-200 py-20 sm:py-24 md:py-32"
+    >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Subtítulo superior */}
         <h3
@@ -33,11 +36,21 @@ export default function Hero() {
 
         {/* Descripción */}
         <p
-          className="text-base sm:text-lg md:text-xl text-gray-600"
-          style={{ fontFamily: "Raleway, sans-serif" }}
-        >
-          ¡Únete a la experiencia musical más esperada del año! Del 13 al 18 de enero de 2025, músicos, artistas y amantes de la música se reunirán en Valdivia, Chile, para celebrar la XXX edición del Campamento Musical Marqués de Mancera.
-        </p>
+  className="text-base sm:text-lg md:text-xl text-gray-600 mb-6"
+  style={{ fontFamily: "Raleway, sans-serif" }}
+>
+  ¡Únete a la experiencia musical más esperada del año! Este 2025, músicos, artistas y amantes de la música se reunirán en Valdivia, Chile, para celebrar la XXX edición del Campamento Musical Marqués de Mancera.  
+  <br />
+  <br />
+ <strong>Jornada de Jazz</strong>, del 13 al 18 de enero.  
+  <br />
+<strong>Jornada de Clásica Sinfónica</strong>, del 27 de enero al 1 de febrero.  
+  <br />
+  <br />
+  Prepárate para vivir una experiencia única en cada jornada, dedicada a explorar lo mejor de la música en sus diferentes expresiones.
+</p>
+
+
       </div>
 
       {/* Botón flotante */}
@@ -45,10 +58,7 @@ export default function Hero() {
         className="absolute left-1/2 transform -translate-x-1/2 bottom-8 cursor-pointer"
         onClick={scrollToCampamentoInfo}
       >
-        <FaChevronDown
-          className="text-orange-500 animate-bounce"
-          size={32}
-        />
+        <FaChevronDown className="text-orange-500 animate-bounce" size={32} />
       </div>
     </section>
   );

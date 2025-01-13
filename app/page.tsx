@@ -5,6 +5,7 @@ import RadioCapsulas from "./components/RadioCapsulas";
 import Profesores from "./components/Profesores";
 import Programa from "./components/Programa";
 import Patrocinadores from "./components/Patrocinadores";
+import Preguntas from "./components/Preguntas";
 import Footer from "./components/Footer";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <Profesores />
       <Programa />
       <Patrocinadores />
+      <Preguntas />
       <Footer />
     </>
   );

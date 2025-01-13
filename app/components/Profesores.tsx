@@ -91,11 +91,6 @@ const profesores = [
     descripcion: "Intérprete de contrabajo, coordinación",
     imagen: "/profesores/marcia_modinger.jpg",
   },
-  {
-    nombre: "Martina Eschmann",
-    descripcion: "Cantante",
-    imagen: "/profesores/martina_eschmann.jpg",
-  },
 ];
 
 export default function Profesores() {
@@ -104,13 +99,13 @@ export default function Profesores() {
       <div className="max-w-7xl mx-auto px-6">
         {/* Títulos */}
         <h3
-          className="text-gray-500 font-caveat font-semibold mb-4 text-center"
+          className="text-orange-500 font-caveat font-semibold mb-4 text-center"
           style={{ fontSize: "25px" }}
         >
           XXX Campamento Musical Marqués de Mancera
         </h3>
-        <h2 className="text-4xl font-bold text-orange-500 mb-6 text-center">
-          Listado de Profesores e Intérpretes
+        <h2 className="text-4xl font-bold text-gray-600 mb-6 text-center">
+          Profesores e Intérpretes
         </h2>
 
         {/* Descripción centrada */}

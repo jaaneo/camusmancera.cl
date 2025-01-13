@@ -116,14 +116,14 @@ export default function AudioPlayer() {
   };
 
   return (
-    <section className="bg-white min-h-screen flex flex-col items-center py-20 px-4 sm:px-6">
+    <section className="bg-white min-h-[60vh] flex flex-col items-center py-10 px-4 sm:px-6">
       {/* Subtítulo Superior */}
-      <h3 className="text-sm text-center tracking-wide text-gray-500 font-caveat font-semibold mb-4" style={{ fontSize: "25px" }}>
+      <h3 className="text-sm text-center tracking-wide text-orange-500 font-caveat font-semibold mb-4" style={{ fontSize: "25px" }}>
         XXX Campamento Musical Marqués de Mancera
       </h3>
 
       {/* Título Principal */}
-      <h1 className="text-4xl font-bold text-orange-500 mb-8 text-center">
+      <h1 className="text-4xl font-bold text-gray-500 mb-8 text-center">
         Cápsulas Radiales
       </h1>
 

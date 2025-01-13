@@ -10,114 +10,95 @@ type Programa = {
   ubicacion: string;
   eventos: string[];
   imagen: string;
+  entradas?: string; // Enlace para adquirir entradas (opcional)
 };
 
-const programaData: Programa[] = [
+const programaJazzData: Programa[] = [
+  {
+    dia: "Lunes 13 de enero",
+    hora: "15:00 hrs",
+    lugar: "Escuela El Bosque, Valdivia",
+    ubicacion:
+      "https://www.google.com/maps/place/Escuela+El+Bosque/data=!4m2!3m1!1s0x0:0xa33d29c9641d3d6?sa=X&ved=1t:2428&ictx=111",
+    eventos: ["Bienvenida y llegada de alumnos."],
+    imagen: "/lunes_jazz.jpg",
+  },
+  {
+    dia: "Martes 14 al Viernes 17 de enero",
+    hora: "09:00 a 13:00 hrs / 15:00 a 18:00 hrs",
+    lugar: "Escuela El Bosque, Valdivia",
+    ubicacion:
+      "https://www.google.com/maps/place/Escuela+El+Bosque/data=!4m2!3m1!1s0x0:0xa33d29c9641d3d6?sa=X&ved=1t:2428&ictx=111",
+    eventos: ["Clases por la mañana", "Ensayos por la tarde"],
+    imagen: "/ensayos_jazz.jpg",
+  },
+  {
+    dia: "Sábado 18 de enero",
+    hora: "Por definir",
+    lugar: "Por definir",
+    ubicacion: "#",
+    eventos: ["Gran Concierto de Cierre"],
+    imagen: "/sabado_jazz.jpg",
+  },
+];
+
+const conciertosData: Programa[] = [
   {
     dia: "Lunes 13 de enero",
     hora: "19:30 hrs",
     lugar: "Teatro Cervantes, Valdivia",
     ubicacion:
-      "https://google.com/maps/dir/-39.8399439,-73.2240565/Teatro+Cervantes+Valdivia/@-39.8260035,-73.2530655,6919m/data=!3m2!1e3!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x9615ee761f544113:0xc0f7a3491355fa2b!2m2!1d-73.2456142!2d-39.8127818?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoJLDEwMjExMjMzSAFQAw%3D%3D",
+      "https://www.google.com/maps/place/Teatro+Regional+Cervantes/data=!4m2!3m1!1s0x0:0xc0f7a3491355fa2b?sa=X&ved=1t:2428&ictx=111",
     eventos: [
       "Orquesta Juvenil e Infantil de Valdivia. Director Pablo Matamala Lopetegui.",
       "Orquesta Ernesto Guarda Carrasco. Director Alejandro Torres.",
       "Orquesta Sinfónica Infantil de la Corporación Cultural Municipal de Puerto Montt. Director Arturo Ojeda.",
     ],
-    imagen: "/lunes.jpg",
+    imagen: "/concierto_cervantes.jpg",
+    entradas:
+      "https://www.passline.com/eventos-plano/campamento-musical-marques-de-mancera-dia-1",
   },
   {
     dia: "Martes 14 de enero",
     hora: "19:30 hrs",
     lugar: "Teatro Cervantes, Valdivia",
     ubicacion:
-      "https://google.com/maps/dir/-39.8399439,-73.2240565/Teatro+Cervantes+Valdivia/@-39.8260035,-73.2530655,6919m/data=!3m2!1e3!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x9615ee761f544113:0xc0f7a3491355fa2b!2m2!1d-73.2456142!2d-39.8127818?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoJLDEwMjExMjMzSAFQAw%3D%3D",
+      "https://www.google.com/maps/place/Teatro+Regional+Cervantes/data=!4m2!3m1!1s0x0:0xc0f7a3491355fa2b?sa=X&ved=1t:2428&ictx=111",
     eventos: [
       "Armonía Fluvial Cuarteto de Flautas Traversa.",
       "Kuatriada. Música Latinoamericana.",
     ],
-    imagen: "/martes.jpg",
-  },
-  {
-    dia: "Miércoles 15 de enero",
-    hora: "19:30 hrs",
-    lugar: "Plaza de Paillaco",
-    ubicacion:
-      "https://www.google.com/maps/dir//Av.+Bernardo+O'Higgins+345,+Paillaco,+Los+R%C3%ADos/@-40.0706411,-72.9551351,27578m/data=!3m1!1e3!4m8!4m7!1m0!1m5!1m1!1s0x9616798c859aa3f7:0x24f6345739e662d0!2m2!1d-72.8727342!2d-40.0706703?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoJLDEwMjExMjMzSAFQAw%3D%3D",
-    eventos: ["Concierto en Paillaco. Música para todos."],
-    imagen: "/paillaco.jpg",
-  },
-  {
-    dia: "Jueves 16 de enero",
-    hora: "19:30 hrs",
-    lugar: "Teatro Cervantes, Valdivia",
-    ubicacion:
-      "https://google.com/maps/dir/-39.8399439,-73.2240565/Teatro+Cervantes+Valdivia/@-39.8260035,-73.2530655,6919m/data=!3m2!1e3!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x9615ee761f544113:0xc0f7a3491355fa2b!2m2!1d-73.2456142!2d-39.8127818?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoJLDEwMjExMjMzSAFQAw%3D%3D",
-    eventos: [
-      "Concierto de Música Barroca: Ensamble del Sur.",
-      "Orquesta de Cámara de la Universidad Austral de Chile.",
-    ],
-    imagen: "/jueves.jpg",
-  },
-  {
-    dia: "Viernes 17 de enero",
-    hora: "19:30 hrs",
-    lugar: "Teatro Cervantes, Valdivia",
-    ubicacion:
-      "https://google.com/maps/dir/-39.8399439,-73.2240565/Teatro+Cervantes+Valdivia/@-39.8260035,-73.2530655,6919m/data=!3m2!1e3!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x9615ee761f544113:0xc0f7a3491355fa2b!2m2!1d-73.2456142!2d-39.8127818?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoJLDEwMjExMjMzSAFQAw%3D%3D",
-    eventos: [
-      "Orquesta Sinfónica Juvenil Nacional de Chile.",
-      "Coro de la Universidad Austral de Chile.",
-    ],
-    imagen: "/viernes.jpg",
-  },
-  {
-    dia: "Sábado 18 de enero",
-    hora: "19:30 hrs",
-    lugar: "Teatro Cervantes, Valdivia",
-    ubicacion:
-      "https://google.com/maps/dir/-39.8399439,-73.2240565/Teatro+Cervantes+Valdivia/@-39.8260035,-73.2530655,6919m/data=!3m2!1e3!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x9615ee761f544113:0xc0f7a3491355fa2b!2m2!1d-73.2456142!2d-39.8127818?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoJLDEwMjExMjMzSAFQAw%3D%3D",
-    eventos: [
-      "Gran Concierto de Clausura.",
-      "Participación de todas las orquestas del Campamento Musical.",
-    ],
-    imagen: "/sabado.jpg",
+    imagen: "/concierto_cervantes_2.jpg",
+    entradas:
+      "https://www.passline.com/eventos-plano/campamento-musical-marques-de-mancera-dia-2",
   },
 ];
 
-export default function Programa() {
-  const handleAddToCalendar = (programa: Programa) => {
-    const [dia, mes] = programa.dia.split(" de ");
-    const fecha = `2025-${mes === "enero" ? "01" : ""}-${dia.padStart(2, "0")}`;
-    const icsContent = `BEGIN:VCALENDAR
-VERSION:2.0
-BEGIN:VEVENT
-SUMMARY:Evento: ${programa.lugar}
-DTSTART:${fecha}T193000Z
-DTEND:${fecha}T213000Z
-LOCATION:${programa.lugar}
-DESCRIPTION:Evento del Campamento Musical 2025
-END:VEVENT
-END:VCALENDAR`;
-
-    const blob = new Blob([icsContent], { type: "text/calendar;charset=utf-8;" });
-    const link = document.createElement("a");
-    link.href = URL.createObjectURL(blob);
-    link.download = `evento-${programa.dia.replace(/\s/g, "-")}.ics`;
-    link.click();
-  };
-
+export default function ProgramaJazzYConciertos() {
   return (
-    <section id="programa" className="bg-gradient-to-b from-gray-800 to-gray-900 py-20">
+    <section id="programa" className="bg-gradient-to-b from-gray-900 to-gray-800 py-20">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-4xl font-extrabold text-center text-orange-500 mb-12 tracking-wide">
-          Programa Musical 2025
+        {/* Jornada de Jazz */}
+        <h3
+          className="text-orange-500 font-caveat font-semibold mb-4 text-center"
+          style={{ fontSize: "25px" }}
+        >
+          XXX Campamento Musical Marqués de Mancera
+        </h3>
+        <h2 className="text-4xl font-bold text-gray-300 mb-6 text-center">
+          Programa Jornada de Jazz
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {programaData.map((programa, index) => (
+   {/* Descripción centrada */}
+   <div className="mx-auto mb-12 text-center max-w-2xl">
+          <p className="text-lg text-gray-200 leading-relaxed">
+            ¡Prepárate para una experiencia inolvidable de jazz en el Campamento Marqués de Mancera!
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {programaJazzData.map((programa, index) => (
             <div
               key={index}
-              className="relative bg-gray-800 rounded-xl shadow-xl overflow-hidden transform transition-transform duration-300 hover:scale-105"
+              className="relative bg-gray-900 rounded-2xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-orange-500/50 group"
             >
               {/* Imagen */}
               <Image
@@ -125,10 +106,10 @@ END:VCALENDAR`;
                 alt={`Imagen del ${programa.dia}`}
                 width={500}
                 height={192}
-                className="w-full h-48 object-cover"
+                className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
               />
               {/* Contenido */}
-              <div className="p-6">
+              <div className="p-6 bg-gradient-to-br from-gray-800 to-gray-900">
                 <h3 className="text-2xl font-bold text-orange-400 mb-2">{programa.dia}</h3>
                 <p className="text-sm font-medium text-gray-400">{programa.lugar}</p>
                 <p className="text-lg font-semibold text-gray-300 mt-2 mb-4">{programa.hora}</p>
@@ -139,8 +120,7 @@ END:VCALENDAR`;
                     </li>
                   ))}
                 </ul>
-                {/* Botones */}
-                <div className="flex space-x-4 mt-4">
+                <div className="flex space-x-4 mt-6">
                   <a
                     href={programa.ubicacion}
                     target="_blank"
@@ -149,12 +129,74 @@ END:VCALENDAR`;
                   >
                     Ver Ubicación
                   </a>
-                  <button
-                    onClick={() => handleAddToCalendar(programa)}
-                    className="text-white bg-blue-500 px-4 py-2 rounded-lg shadow hover:bg-blue-600 transition"
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+<br /><br /><br />
+        {/* Conciertos */}
+        <h3
+          className="text-orange-500 font-caveat font-semibold mb-4 text-center"
+          style={{ fontSize: "25px" }}
+        >
+          XXX Campamento Musical Marqués de Mancera
+        </h3>
+        <h2 className="text-4xl font-bold text-gray-300 mb-6 text-center">
+          Conciertos Destacados
+        </h2>
+         {/* Descripción centrada */}
+         <div className="mx-auto mb-12 text-center max-w-2xl">
+          <p className="text-lg text-gray-200 leading-relaxed">
+          Llega al Teatro Regional Cervantes el Campamento Musical Marqués de Mancera, un espacio formativo niños, niñas y adolescentes. 
+          Actualmente esta actividad está considerada como uno de las más significativas del sur de Chile en su categoría.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {conciertosData.map((concierto, index) => (
+            <div
+              key={index}
+              className="relative bg-gray-900 rounded-2xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/50 group"
+            >
+              {/* Imagen */}
+              <Image
+                src={concierto.imagen}
+                alt={`Imagen del ${concierto.dia}`}
+                width={500}
+                height={192}
+                className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              {/* Contenido */}
+              <div className="p-6 bg-gradient-to-br from-gray-800 to-gray-900">
+                <h3 className="text-2xl font-bold text-blue-400 mb-2">{concierto.dia}</h3>
+                <p className="text-sm font-medium text-gray-400">{concierto.lugar}</p>
+                <p className="text-lg font-semibold text-gray-300 mt-2 mb-4">{concierto.hora}</p>
+                <ul className="list-disc list-inside space-y-2 text-gray-200">
+                  {concierto.eventos.map((evento, i) => (
+                    <li key={i} className="text-sm leading-relaxed">
+                      {evento}
+                    </li>
+                  ))}
+                </ul>
+                <div className="flex space-x-4 mt-6">
+                  <a
+                    href={concierto.ubicacion}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white bg-orange-500 px-4 py-2 rounded-lg shadow hover:bg-orange-600 transition"
                   >
-                    Agregar al Calendario
-                  </button>
+                    Ver Ubicación
+                  </a>
+                  {concierto.entradas && (
+                    <a
+                      href={concierto.entradas}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white bg-blue-500 px-4 py-2 rounded-lg shadow hover:bg-blue-600 transition"
+                    >
+                      Adquirir Entradas
+                    </a>
+                  )}
                 </div>
               </div>
             </div>

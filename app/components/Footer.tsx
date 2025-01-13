@@ -21,19 +21,19 @@ export default function Footer() {
 
         {/* Enlaces rápidos */}
         <div>
-          <h3 className="text-lg font-semibold text-white mb-4">Enlaces Rápidos</h3>
+          <h3 className="text-lg font-semibold text-orange-500 mb-4">Enlaces Rápidos</h3>
           <ul className="space-y-2">
             <li><a href="#inicio" className="hover:text-orange-500 transition">Inicio</a></li>
             <li><a href="#exponentes" className="hover:text-orange-500 transition">Exponentes</a></li>
             <li><a href="#programa" className="hover:text-orange-500 transition">Calendario</a></li>
             <li><a href="#noticias" className="hover:text-orange-500 transition">Noticias</a></li>
-            <li><a href="#contacto" className="hover:text-orange-500 transition">Contacto</a></li>
+            <li><a href="#contacto" className="hover:text-orange-500 transition">Preguntas Frecuentes</a></li>
           </ul>
         </div>
 
         {/* Redes sociales */}
         <div>
-          <h3 className="text-lg font-semibold text-white mb-4">Síguenos</h3>
+          <h3 className="text-lg font-semibold text-orange-500 mb-4">Síguenos</h3>
           <div className="flex space-x-4">
             <a
               href="https://www.facebook.com/camusmancera.cl/?locale=es_LA"
