@@ -57,7 +57,7 @@ export default function Navbar() {
               </a>
             </li>
             <li>
-              <button onClick={() => handleScroll("preguntas-frecuentes")} className="hover:text-orange-500">
+              <button onClick={() => handleScroll("preguntas")} className="hover:text-orange-500">
                 Preguntas Frecuentes
               </button>
             </li>
@@ -106,7 +106,7 @@ export default function Navbar() {
           } md:hidden bg-white border-t border-gray-200`}
         >
           <ul className="flex flex-col space-y-4 py-4 px-4 font-medium text-gray-700">
-            <li>
+          <li>
               <button onClick={() => handleScroll("inicio")} className="hover:text-orange-500">
                 Inicio
               </button>
@@ -127,7 +127,7 @@ export default function Navbar() {
               </a>
             </li>
             <li>
-              <button onClick={() => handleScroll("preguntas-frecuentes")} className="hover:text-orange-500">
+              <button onClick={() => handleScroll("preguntas")} className="hover:text-orange-500">
                 Preguntas Frecuentes
               </button>
             </li>

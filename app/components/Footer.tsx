@@ -1,9 +1,17 @@
 "use client";
+
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../fontawesome"; // Importa la configuración de FontAwesome
 
 export default function Footer() {
+  const handleScroll = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" }); // Efecto de suavidad
+    }
+  };
+
   return (
     <footer className="bg-gray-800 text-gray-300 py-10">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -15,7 +23,7 @@ export default function Footer() {
             className="w-24 mb-4"
           />
           <p className="text-sm leading-relaxed">
-            Campamento Musical Marqués de Mancera. Inspirando a músicos jóvenes desde 1995 con experiencias formativas de excelencia.
+            XXX Campamento Musical Marqués de Mancera. Inspirando a músicos jóvenes desde 1995 con experiencias formativas de excelencia.
           </p>
         </div>
 
@@ -23,11 +31,47 @@ export default function Footer() {
         <div>
           <h3 className="text-lg font-semibold text-orange-500 mb-4">Enlaces Rápidos</h3>
           <ul className="space-y-2">
-            <li><a href="#inicio" className="hover:text-orange-500 transition">Inicio</a></li>
-            <li><a href="#exponentes" className="hover:text-orange-500 transition">Exponentes</a></li>
-            <li><a href="#programa" className="hover:text-orange-500 transition">Calendario</a></li>
-            <li><a href="#noticias" className="hover:text-orange-500 transition">Noticias</a></li>
-            <li><a href="#contacto" className="hover:text-orange-500 transition">Preguntas Frecuentes</a></li>
+            <li>
+              <button
+                onClick={() => handleScroll("inicio")}
+                className="hover:text-orange-500 transition"
+              >
+                Inicio
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={() => handleScroll("exponentes")}
+                className="hover:text-orange-500 transition"
+              >
+                Exponentes
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={() => handleScroll("programa")}
+                className="hover:text-orange-500 transition"
+              >
+                Calendario
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={() => handleScroll("preguntas")}
+                className="hover:text-orange-500 transition"
+              >
+                Preguntas Frecuentes
+              </button>
+            </li>
+            <li>
+  <a
+    href="mailto:campamentomarquesmancera@gmail.com"
+    className="hover:text-orange-500 transition"
+  >
+    Contacto
+  </a>
+</li>
+
           </ul>
         </div>
 
