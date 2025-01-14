@@ -3,7 +3,8 @@ import React from "react";
 const profesores = [
   {
     nombre: "Pablo Matamala",
-    descripcion: "Director y coordinador general Campamentos Marqués de Mancera",
+    descripcion:
+      "Director y coordinador general Campamentos Marqués de Mancera",
     imagen: "/profesores/pablo_matamala.jpg",
   },
   {
@@ -57,9 +58,24 @@ const profesores = [
     imagen: "/profesores/matias_soto.jpg",
   },
   {
-    nombre: "Daniel Leiva",
+    nombre: "Rodrigo Cárcamo",
     descripcion: "Intérprete de violín",
-    imagen: "/profesores/daniel_leiva.jpg",
+    imagen: "/profesores/rodrigo_carcamo.jpg",
+  },
+  {
+    nombre: "Paula Poveda",
+    descripcion: "Intérprete de violín",
+    imagen: "/profesores/paula_poveda.jpg",
+  },
+  {
+    nombre: "Daniela Roa",
+    descripcion: "Intérprete de violín",
+    imagen: "/profesores/daniela_roa.jpg",
+  },
+  {
+    nombre: "Dayana Olmos",
+    descripcion: "Intérprete de violín y Directora",
+    imagen: "/profesores/dayana_olmos.jpg",
   },
   {
     nombre: "Camilo Cañoles",
@@ -91,6 +107,22 @@ const profesores = [
     descripcion: "Intérprete de contrabajo, coordinación",
     imagen: "/profesores/marcia_modinger.jpg",
   },
+  {
+    nombre: "Facundo Quense",
+    descripcion: "Intérprete y Profesor de flauta traversa",
+    imagen: "/profesores/facundo_quense.jpg",
+  },
+  {
+    nombre: "Rodrigo Torres",
+    descripcion: "Director Orquesta Ernesto Guarda Carrasco",
+    imagen: "/profesores/rodrigo_torres.jpg",
+  },
+  {
+    nombre: "Arturo Ojeda",
+    descripcion:
+      "Director Orquesta sinfónica infantil de la Corporacion cultural municipal de Puerto Montt",
+    imagen: "/profesores/arturo_ojeda.jpg",
+  },
 ];
 
 export default function Profesores() {
@@ -111,9 +143,10 @@ export default function Profesores() {
         {/* Descripción centrada */}
         <div className="mx-auto mb-12 text-center max-w-2xl">
           <p className="text-lg text-gray-700 leading-relaxed">
-          El Campamento Musical Marqués de Mancera cuenta con un equipo de profesores
-          e intérpretes destacados de Chile, comprometidos con entregar una experiencia
-          educativa única y elevar el nivel musical de cada participante.
+            El Campamento Musical Marqués de Mancera cuenta con un equipo de
+            profesores e intérpretes destacados de Chile, comprometidos con
+            entregar una experiencia educativa única y elevar el nivel musical
+            de cada participante.
           </p>
         </div>
 
@@ -122,7 +155,7 @@ export default function Profesores() {
           {profesores.map((profesor, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transform transition duration-300"
+              className="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-orange-500/50 group"
             >
               <img
                 src={profesor.imagen}

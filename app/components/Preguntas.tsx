@@ -72,7 +72,7 @@ export default function Preguntas() {
         </h2>
         {/* Descripción centrada */}
         <div className="mx-auto mb-12 text-center max-w-2xl">
-          <p className="text-lg font-semibold text-gray-400 text-center mt-6">
+          <p className="text-base font-semibold text-gray-400 text-center mt-6">
             Hemos seleccionado un grupo de preguntas frecuentes para ayudarte a
             resolver cualquier inquietud que puedas tener. Si tienes más dudas,
             no dudes en escribirnos al correo:
