@@ -1,9 +1,16 @@
-"use client";
-
 import "./globals.css";
 import "./fontawesome";
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export const metadata = {
+  title: "Campamento Musical Marqués de Mancera",
+  description: "Sitio oficial del XXX Campamento Musical Marqués de Mancera",
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="es">
       <head>
@@ -12,7 +19,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           rel="stylesheet"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+      </body>
     </html>
   );
 }
