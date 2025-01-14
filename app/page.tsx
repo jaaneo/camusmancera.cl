@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import CampamentoOnline from "./components/CampamentoOnline";
 import CampamentoInfo from "./components/CampamentoInfo";
 import RadioCapsulas from "./components/RadioCapsulas";
 import Profesores from "./components/Profesores";
@@ -13,6 +14,7 @@ export default function Home() {
     <>
       <Navbar />
       <Hero />
+      <CampamentoOnline videoId="s1zHw2KOhEQ" />
       <CampamentoInfo />
       <RadioCapsulas />
       <Profesores />

@@ -127,7 +127,7 @@ export default function AudioPlayer() {
         Cápsulas Radiales
       </h1>
 
-      <div className="w-full max-w-lg bg-gray-800 rounded-xl shadow-lg p-6">
+      <div className="w-full max-w-lg bg-gray-800 rounded-xl shadow-lg p-6 transform transition duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-orange-500/50 group">
         {/* Track Info */}
         <div className="flex items-center space-x-4">
           <img
