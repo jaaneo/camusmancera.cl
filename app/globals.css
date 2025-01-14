@@ -75,3 +75,17 @@ h1, h2, h3, h4, h5, h6 {
   background: linear-gradient(to right, #feb47b, #ff7e5f);
 }
 
+@keyframes pulseLive {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 1);
+  }
+}
+
+.animate-pulse-live {
+  animation: pulseLive 1.5s infinite;
+}

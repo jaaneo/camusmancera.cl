@@ -14,7 +14,7 @@ const CampamentoOnline: React.FC<CampamentoOnlineProps> = ({
   const youtubeEmbedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
 
   return (
-    <section className="bg-gradient-to-b from-white to-gray-100 py-16 px-6">
+    <section id="en-vivo" className="bg-gradient-to-b from-white to-gray-100 py-16 px-6">
       <div className="max-w-7xl mx-auto">
         {/* Subtítulo Superior */}
         <h3
@@ -25,7 +25,7 @@ const CampamentoOnline: React.FC<CampamentoOnlineProps> = ({
         </h3>
 
         {/* Título */}
-        <h2 className="text-4xl font-bold text-gray-700 mb-8 text-center">
+        <h2 className="text-4xl font-bold text-gray-600 mb-8 text-center">
           {title}
         </h2>
 
