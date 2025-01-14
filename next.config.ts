@@ -1,19 +1,7 @@
 import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
+const nextConfig = {
   async redirects() {
-    const maintenanceMode = process.env.MAINTENANCE_MODE === "false";
-
-    if (maintenanceMode) {
-      return [
-        {
-          source: "/",
-          destination: "/maintenance",
-          permanent: false,
-        },
-      ];
-    }
-
     return [];
   },
 };

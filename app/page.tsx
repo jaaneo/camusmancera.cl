@@ -1,4 +1,3 @@
-import RegisterVisit from "./components/RegisterVisit";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import CampamentoInfo from "./components/CampamentoInfo";
@@ -12,7 +11,6 @@ import Footer from "./components/Footer";
 export default function Home() {
   return (
     <>
-      <RegisterVisit />
       <Navbar />
       <Hero />
       <CampamentoInfo />
