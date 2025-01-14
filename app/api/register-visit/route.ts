@@ -7,13 +7,8 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 
 export async function POST(req: Request) {
   try {
-    // Obtiene la IP real o usa un fallback
-    const forwarded = req.headers.get("x-forwarded-for");
-    const ip = forwarded ? forwarded.split(",")[0].trim() : req.socket?.remoteAddress || "::1";
+    const ip = req.headers.get("x-forwarded-for") || "Unknown IP";
 
-    console.log("IP detectada:", ip); // Log para verificar
-
-    // Inserta la IP en la tabla 'visits'
     const { error } = await supabase.from("visits").insert({ ip_address: ip });
 
     if (error) {
