@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 
 export default function Navbar() {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleScroll = (id: string) => {
