@@ -34,9 +34,10 @@ const programaJazzData: Programa[] = [
   },
   {
     dia: "Sábado 18 de enero",
-    hora: "Por definir",
-    lugar: "Por definir",
-    ubicacion: "#",
+    hora: "19:00 hrs",
+    lugar: "Parque Urbano El Bosque, Valdivia",
+    ubicacion:
+      "https://www.google.com/maps?hl=es-419&gl=cl&um=1&ie=UTF-8&fb=1&sa=X&ftid=0x9615ee444b6745d1:0x9836909b2a782bb0",
     eventos: ["Gran Concierto de Cierre"],
     imagen: "/sabado_jazz.jpg",
   },
@@ -72,11 +73,38 @@ const conciertosData: Programa[] = [
     entradas:
       "https://www.passline.com/eventos-plano/campamento-musical-marques-de-mancera-dia-2",
   },
+  {
+    dia: "Viernes 17 de enero",
+    hora: "19:30 hrs",
+    lugar: "Parque Urbano El Bosque, Valdivia",
+    ubicacion:
+      "https://www.google.com/maps?hl=es-419&gl=cl&um=1&ie=UTF-8&fb=1&sa=X&ftid=0x9615ee444b6745d1:0x9836909b2a782bb0",
+    eventos: ["Armonía Fluvial Cuarteto de Flautas Traversa."],
+    imagen: "/concierto_cervantes_2.jpg",
+    entradas:
+      "#",
+  },
+  {
+    dia: "Martes 28 de enero",
+    hora: "18:00 hrs",
+    lugar: "XXVIII Feria Costumbrista de Punucapa, Punucapa Valdivia",
+    ubicacion:
+      "https://www.google.com/maps/place/Feria+Costumbrista+De+Punucapa/data=!4m2!3m1!1s0x0:0x2adb96bfae873bbc?sa=X&ved=1t:2428&ictx=111",
+    eventos: [
+      "Orquesta Infantil Juvenil de Valdivia.",
+      "Música Chilena y Latinoamericana.",
+    ],
+    imagen: "/concierto_punucapa.jpg",
+    entradas: "#",
+  },
 ];
 
 export default function ProgramaJazzYConciertos() {
   return (
-    <section id="programa" className="bg-gradient-to-b from-gray-900 to-gray-800 py-20">
+    <section
+      id="programa"
+      className="bg-gradient-to-b from-gray-900 to-gray-800 py-20"
+    >
       <div className="max-w-7xl mx-auto px-6">
         {/* Jornada de Jazz */}
         <h3
@@ -88,10 +116,11 @@ export default function ProgramaJazzYConciertos() {
         <h2 className="text-4xl font-bold text-gray-300 mb-6 text-center">
           Programa Jornada de Jazz
         </h2>
-   {/* Descripción centrada */}
-   <div className="mx-auto mb-12 text-center max-w-2xl">
+        {/* Descripción centrada */}
+        <div className="mx-auto mb-12 text-center max-w-2xl">
           <p className="text-lg text-gray-200 leading-relaxed">
-            ¡Prepárate para una experiencia inolvidable de jazz en el Campamento Marqués de Mancera!
+            ¡Prepárate para una experiencia inolvidable de jazz en el Campamento
+            Marqués de Mancera!
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
@@ -110,9 +139,15 @@ export default function ProgramaJazzYConciertos() {
               />
               {/* Contenido */}
               <div className="p-6 bg-gradient-to-br from-gray-800 to-gray-900">
-                <h3 className="text-2xl font-bold text-orange-400 mb-2">{programa.dia}</h3>
-                <p className="text-sm font-medium text-gray-400">{programa.lugar}</p>
-                <p className="text-lg font-semibold text-gray-300 mt-2 mb-4">{programa.hora}</p>
+                <h3 className="text-2xl font-bold text-orange-400 mb-2">
+                  {programa.dia}
+                </h3>
+                <p className="text-sm font-medium text-gray-400">
+                  {programa.lugar}
+                </p>
+                <p className="text-lg font-semibold text-gray-300 mt-2 mb-4">
+                  {programa.hora}
+                </p>
                 <ul className="list-disc list-inside space-y-2 text-gray-200">
                   {programa.eventos.map((evento, i) => (
                     <li key={i} className="text-sm leading-relaxed">
@@ -134,7 +169,9 @@ export default function ProgramaJazzYConciertos() {
             </div>
           ))}
         </div>
-<br /><br /><br />
+        <br />
+        <br />
+        <br />
         {/* Conciertos */}
         <h3
           className="text-orange-500 font-caveat font-semibold mb-4 text-center"
@@ -145,11 +182,13 @@ export default function ProgramaJazzYConciertos() {
         <h2 className="text-4xl font-bold text-gray-300 mb-6 text-center">
           Conciertos Destacados
         </h2>
-         {/* Descripción centrada */}
-         <div className="mx-auto mb-12 text-center max-w-2xl">
+        {/* Descripción centrada */}
+        <div className="mx-auto mb-12 text-center max-w-2xl">
           <p className="text-lg text-gray-200 leading-relaxed">
-          Llega al Teatro Regional Cervantes el Campamento Musical Marqués de Mancera, un espacio formativo niños, niñas y adolescentes. 
-          Actualmente esta actividad está considerada como uno de las más significativas del sur de Chile en su categoría.
+            Llega al Teatro Regional Cervantes el Campamento Musical Marqués de
+            Mancera, un espacio formativo niños, niñas y adolescentes.
+            Actualmente esta actividad está considerada como uno de las más
+            significativas del sur de Chile en su categoría.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -168,9 +207,15 @@ export default function ProgramaJazzYConciertos() {
               />
               {/* Contenido */}
               <div className="p-6 bg-gradient-to-br from-gray-800 to-gray-900">
-                <h3 className="text-2xl font-bold text-blue-400 mb-2">{concierto.dia}</h3>
-                <p className="text-sm font-medium text-gray-400">{concierto.lugar}</p>
-                <p className="text-lg font-semibold text-gray-300 mt-2 mb-4">{concierto.hora}</p>
+                <h3 className="text-2xl font-bold text-blue-400 mb-2">
+                  {concierto.dia}
+                </h3>
+                <p className="text-sm font-medium text-gray-400">
+                  {concierto.lugar}
+                </p>
+                <p className="text-lg font-semibold text-gray-300 mt-2 mb-4">
+                  {concierto.hora}
+                </p>
                 <ul className="list-disc list-inside space-y-2 text-gray-200">
                   {concierto.eventos.map((evento, i) => (
                     <li key={i} className="text-sm leading-relaxed">
@@ -189,12 +234,26 @@ export default function ProgramaJazzYConciertos() {
                   </a>
                   {concierto.entradas && (
                     <a
-                      href={concierto.entradas}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-white bg-blue-500 px-4 py-2 rounded-lg shadow hover:bg-blue-600 transition"
+                      href={
+                        concierto.entradas !== "#"
+                          ? concierto.entradas
+                          : undefined
+                      }
+                      target={concierto.entradas !== "#" ? "_blank" : undefined}
+                      rel={
+                        concierto.entradas !== "#"
+                          ? "noopener noreferrer"
+                          : undefined
+                      }
+                      className={`text-white px-4 py-2 rounded-lg shadow transition ${
+                        concierto.entradas !== "#"
+                          ? "bg-blue-500 hover:bg-blue-600"
+                          : "bg-green-500 hover:bg-green-600"
+                      }`}
                     >
-                      Adquirir Entradas
+                      {concierto.entradas !== "#"
+                        ? "Adquirir Entradas"
+                        : "Evento Gratuito"}
                     </a>
                   )}
                 </div>

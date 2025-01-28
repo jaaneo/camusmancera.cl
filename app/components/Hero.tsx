@@ -44,7 +44,7 @@ export default function Hero() {
   <br />
  <strong>Jornada de Jazz</strong>, del 13 al 18 de enero.  
   <br />
-<strong>Jornada de Clásica Sinfónica</strong>, del 27 de enero al 1 de febrero.  
+<strong>Jornada de Clásica Sinfónica</strong>, del Lunes 17 de febrero al Sábado 23 de febrero.  
   <br />
   <br />
   Prepárate para vivir una experiencia única en cada jornada, dedicada a explorar lo mejor de la música en sus diferentes expresiones.
